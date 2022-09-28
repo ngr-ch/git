@@ -1,0 +1,47 @@
+================GIT Init or Push to Existing Repo==============
+create a new repository on the command line
+echo "# git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ngr-ch/git.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/ngr-ch/git.git
+git branch -M main
+git push -u origin main
+
+===============================================================
+git config --global -l   # user info
+git remote -v            # Remote URL connected
+git remote add origin <url>
+git remote set-url origin <url>
+git config --global user.name “[firstname lastname]”
+git config --global user.email “[valid-email]”
+git config --global color.ui auto
+
+git init
+git pull
+git add . or *
+git commit -m "commitname"
+git status
+git branch
+git checkout develop
+
+===Revert Commit Locally & Remote Repository===================
+
+If you done multiple commits in locally
+git log --oneline
+check latest commit id & copy
+git reset --hard commit-id or git reset --hard HEAD~1
+check git log again
+
+-------------------Remotely Revert Commit----------------------
+
+git log --oneline
+check latest commit id & copy
+git rever commit-id 
+it will ur commit info in vi mode, Simply go to insert mode and type :wq -ENTER
+git push -f origin master or develop
+
